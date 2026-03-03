@@ -1,23 +1,32 @@
 public class OOPSBannerApp {
+
     public static void main(String[] args) {
- 
-        String[] banner = new String[7];
+        String[] banner = createBanner();
+        printBanner(banner);
+    }
 
-        banner[0] = String.join(" ",
-                "  *****  ", "  *****  ", " ******  ", "  ****** ");
-        banner[1] = String.join(" ",
-                " *     * ", " *     * ", " *     * ", " *       ");
-        banner[2] = String.join(" ",
-                "*       *", "*       *", " *     * ", " *       ");
-        banner[3] = String.join(" ",
-                "*       *", "*       *", " ******  ", "  *****  ");
-        banner[4] = String.join(" ",
-                "*       *", "*       *", " *       ", "       * ");
-        banner[5] = String.join(" ",
-                " *     * ", " *     * ", " *       ", "       * ");
-        banner[6] = String.join(" ",
-                "  *****  ", "  *****  ", " *       ", "  ***** ");
+    // Function to create banner
+    public static String[] createBanner() {
+        return new String[] {
+            String.join(" ",
+                "  *****  ", "  *****  ", " ******  ", "  ****** "),
+            String.join(" ",
+                " *     * ", " *     * ", " *     * ", " *       "),
+            String.join(" ",
+                "*       *", "*       *", " *     * ", " *       "),
+            String.join(" ",
+                "*       *", "*       *", " ******  ", "  *****  "),
+            String.join(" ",
+                "*       *", "*       *", " *       ", "       * "),
+            String.join(" ",
+                " *     * ", " *     * ", " *       ", "       * "),
+            String.join(" ",
+                "  *****  ", "  *****  ", " *       ", "  *****  ")
+        };
+    }
 
+    // Function to print banner
+    public static void printBanner(String[] banner) {
         for (String line : banner) {
             System.out.println(line);
         }
